@@ -25,20 +25,6 @@ h1 {
     font-weight: bold;
 }
 
-nav {
-    display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    position: relative;
-}
-
-nav a {
-    display: block;
-    padding: 20px;
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-}
 
 .reset-button {
     font-size: 25px; 
@@ -118,10 +104,6 @@ h3 {
       padding: 5px;
       margin-bottom: 10px;
       font-size: 70px;
-    }
-  
-    nav {
-      justify-content: center;
     }
   
 
