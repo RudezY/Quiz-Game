@@ -81,14 +81,13 @@ function init() {
 
 // the SetHighScore function calculates score when either all questions are answered or time runs out
 function setHighScores() {
-    startButton.disabled = false;
 }
 
 // Creates questions on the screen
 
 // updates the high scores on screen and sends high scores to client storage
 function updateHighScores() {
-
+}
 // this function is used by init to grab the high scores from storage
 
 // attach even listener to begin quiz button on click
