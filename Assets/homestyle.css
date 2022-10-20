@@ -25,31 +25,6 @@ h1 {
     font-weight: bold;
 }
 
-
-.reset-button {
-    font-size: 25px; 
-    height: 35px;
-    line-height: 15px;
-    margin-top: 15px;
-    background-color: crimson;;
-}
-
-.start-button {
-    font-size: 25px; 
-    height: 35px;
-    background-color: crimson;;
-
-}
-
-.quiz-question h2 {
-    font-size: 45px; 
-    font-weight: bolder;
-}
-
-.timer-count {
-    font-size: 60px;
-}
-
 main {
     display: flex;
     flex-wrap: wrap;
@@ -62,33 +37,35 @@ section {
     margin-top: 60px;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
+    background: linear-gradient(to top left, rgb(248, 71, 27), rgb(45, 123, 197));
+    opacity: 0.9;
 }
 
-section.Quiz {
-    width: 1200px;
+section {
+    width: fit-content;
     height: fit-content;
     text-align: center;
 }
 
-div li {
-    margin-bottom: 40px;
+input {
+    font-size: 25px;
+    height: 35px;  
+    background-color: crimson;;
+    border-radius: 5px;
+}
+input:hover {
+    background-color: rgb(180, 180, 180);
+    cursor: pointer;
 }
 
- div.High-Score{
-}
-.card {
+div {
     border: 2px solid ;
     border-radius: 5px;
     padding: 30px;
 }
 
-.timer-count {
-    text-align: center;
-}
 
-h3 {
-    text-align: center;
-}
+
 
 
 

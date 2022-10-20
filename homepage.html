@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the JavaScript Quiz Game!</title>
+    <link rel="stylesheet" href="./Assets/homestyle.css">
+</head>
+
+<body style="background-image: url('https://thumbs.dreamstime.com/b/randomly-scattered-question-marks-white-paper-over-colorful-red-background-conceptual-image-165308628.jpg');">
+    <header>
+        <h1>Welcome to the JavaScript Quiz Game!</h1>
+        </header>
+        <main>
+            
+            <section>
+                <div>
+                   <h2>Are you ready to play?</h2>
+                    <button class="go-button">Begin the Quiz</button>
+                    <button class="High-Scores">High Scores</button>
+                    <input type="button" value="Begin the Quiz" id="go-button" onclick="gameDoc()">
+                    <script>
+                        function gameDoc(){
+                           window.location.assign("gamepage.html");
+                        }
+                    </script>
+                        
+                </div>
+            </section>
+
+
+
+        </main>
+</body>
+<script src="./Assets/homepage.js">
+</script>
+</html>
