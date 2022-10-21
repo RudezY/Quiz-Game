@@ -1,16 +1,14 @@
 *{
     box-sizing: border-box;
-}
-
-body {
-    background-color:white;
+    margin 0;
+    padding: 0;
 }
 
 header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 20px;
     font-size: 60px;
     background-color: rgb(241, 13, 13);
     width: 40%;
@@ -26,8 +24,8 @@ h1 {
 }
 .button {
     display: flex;
-    justify-content: center;
     margin-top: 20px;
+    justify-content: center;
     height: 70px;
 }
 
@@ -69,7 +67,7 @@ button {
     cursor: pointer;
 }
 #game {
-    display: 
+    display:
 }
 .choice-prefix {
 padding: .5rem 1.5rem;

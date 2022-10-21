@@ -1,23 +1,26 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 90px;
-    justify-content: flex-start;
+   background: #000;
 } 
+canvas {
+    display: block;
+    height:100%; 
+    width:100%;
+}
 
 header {
-    background-color: rgb(45, 123, 197);
+    background: linear-gradient(to top left, rgb(240, 49, 49), rgb(45, 123, 197));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #eee;
+    height: 2cm;
+    opacity: .9;
 }
 
 h1 {
@@ -37,7 +40,7 @@ section {
     margin-top: 60px;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
-    background: linear-gradient(to top left, rgb(248, 71, 27), rgb(45, 123, 197));
+    background: linear-gradient(to top left, rgb(240, 49, 49), rgb(45, 123, 197));
     opacity: 0.9;
 }
 
@@ -50,11 +53,11 @@ section {
 button {
     font-size: 25px;
     height: 35px;  
-    background-color: crimson;;
+    background-color: white;;
     border-radius: 5px;
 }
 button:hover {
-    background-color: rgb(180, 180, 180);
+    background-color: crimson;
     cursor: pointer;
 }
 
@@ -81,6 +84,16 @@ div {
       padding: 5px;
       margin-bottom: 10px;
       font-size: 70px;
+      
+    }
+
+    div {
+        right: 0;
+        left: auto;
+      }
+    canvas {
+        width: 100%;
+        height: 100%;
     }
   
 
@@ -90,4 +103,12 @@ div {
     h1 {
         font-size: 50px;
     }
+    canvas {
+        width: 100%;
+        height: 100%;
+    }
+    div {
+        right: 0;
+        left: auto;
+      }
   }

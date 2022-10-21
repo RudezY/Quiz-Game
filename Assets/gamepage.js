@@ -94,7 +94,8 @@ startGame = () => {
 getNewQuestions = () => {
   // returns to high score page 
   if(availableQuestions.length === 0 || questionCounter > Max_Questions) {
-    return window.location.assign("../highscore.html")
+    localStorage.setItem('recentScore', score);
+    return window.location.assign("../results.html")
 
   }
   questionCounter ++;
@@ -150,9 +151,5 @@ incrementScore = num => {
 // the SetTimer function starts and stops the timer and will trigger the total score calculation
 
 // the SetHighScore function calculates score when either all questions are answered or time runs out
-
-
-// updates the high scores on screen and sends high scores to client storage
-
 
 // attach even listener to begin quiz button on click

@@ -1,6 +1,7 @@
 var gamePage = document.querySelector(".go-button");
 var highScores = document.querySelector(".High-Scores");
 
+
 function goToGamePage() {
     window.location.assign("../gamepage.html");
 }
@@ -9,7 +10,7 @@ gamePage.addEventListener("click", function() {
     });
     
 function goToHighScorePage() {
-    window.location.assign("../highscore.html");
+    window.location.assign("../highscores.html");
 }
 
 highScores.addEventListener("click", function() {
