@@ -35,7 +35,7 @@ var questions = [
     choice2: "let cannot be reassigned, const can be reassigned",
     choice3: "let is functional scope, while const is block scope",
     choice4: "let is block scope, while const is functional scope",
-      answer: 2
+      answer: 1
   },
   {
     question: "The != and !== symbols both work the same for inequality comparisons:",
@@ -61,11 +61,28 @@ var questions = [
     choice4: "<script>",
       answer: 4
   },
+  {
+    question:
+      "What is the correct syntax for referring to an external script called 'xxx.js'?",
+    choice1: "<script href='xxx.js'>",
+    choice2: "<script name='xxx.js'>",
+    choice3: "<script src='xxx.js'>",
+    choice4: "<script file='xxx.js'>",
+    answer: 3
+  },
+  {
+    question: " How do you write 'Hello World' in an alert box?",
+    choice1: "msgBox('Hello World');",
+    choice2: "alertBox('Hello World');",
+    choice3: "msg('Hello World');",
+    choice4: "alert('Hello World');",
+    answer: 4
+  }
 ];
 
 // constant needed for game
 const Correct_Points = 10;
-const Max_Questions = 6;
+const Max_Questions = 5;
 // nest within timer and start button
 startGame = () => {
   questionCounter = 0;
@@ -75,10 +92,14 @@ startGame = () => {
 };
 // grabs a random question from the array to ask
 getNewQuestions = () => {
+  // returns to high score page 
+  if(availableQuestions.length === 0 || questionCounter > Max_Questions) {
+    return window.location.assign("../highscore.html")
+
+  }
   questionCounter ++;
   const questionOrder = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionOrder];
-  console.log(availableQuestions);
   question.innerText = currentQuestion.question;
 
   choices.forEach(choice => {
@@ -90,27 +111,39 @@ getNewQuestions = () => {
 
   acceptingAnswer = true;
 
-  
-
 };
 // listens for click to log which "choice" was picked
  choices.forEach(choice => {
  choice.addEventListener("click", e => {
   if (!acceptingAnswer) return;
   acceptingAnswer = false;
+  const selectedChoice = e.target;
   const selectedAnswer = selectedChoice.dataset["number"];
+ // this applies if selected choice was correct or incorrect.
+ var valueToApply = "incorrect";
+  if ( selectedAnswer == currentQuestion.answer){
+    valueToApply = "correct";
+  };
 
-  const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+if (valueToApply === "correct"){
+  incrementScore(Correct_Points)
+}
 
-  selectedChoice.parentElement.classList.add(classToApply);
-  });
+  setTimeout( () => {
+  getNewQuestions();
+  }, 1000);
  });
+});
 
+incrementScore = num => {
+  score += num;
+  console.log(score);
+};
 
  startGame();
 
 
-// The begin quiz function when the button is clicked
+// The begin quiz button when the button is clicked
 
 // the end quiz function is called when either all questions are answered or time runs out
 
@@ -123,6 +156,3 @@ getNewQuestions = () => {
 
 
 // attach even listener to begin quiz button on click
-
-
-

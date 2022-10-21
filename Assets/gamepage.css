@@ -69,7 +69,7 @@ button {
     cursor: pointer;
 }
 #game {
-    display:
+    display: 
 }
 .choice-prefix {
 padding: .5rem 1.5rem;
@@ -81,4 +81,5 @@ align-items: center;
 .choice-text {
     padding-left: 30px;
     padding-top: 10px;
+    width: 100%;
 }
