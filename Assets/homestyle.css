@@ -28,7 +28,9 @@ h1 {
 main {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 }
 
 section {
@@ -45,6 +47,12 @@ section {
     width: fit-content;
     height: fit-content;
     text-align: center;
+}
+
+#highScoreList {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
 }
 
 button {
