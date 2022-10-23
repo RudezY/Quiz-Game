@@ -9,14 +9,16 @@
 </head>
 <body>
     <header>
-        <h1>TIMER WILL GO HERE</h1>
+        <div class="timer">Time Remaining:
+            <span class="time"></span>
+        </div>
     </header>
-    <div class="button">
+    <div class ="hide" id ="start">
         <button class="start-button">BEGIN QUIZ!</button>
     </div>
     <div class="container">
         
-        <div id="game" class="justify-center flex-column">
+        <div class="hide" id="game">
             <h2 id="question">Please answer every question. You will lose time for each incorrect answer!</h2>
             <div class="choice-container">
                 <p class="choice-prefix">A</p>

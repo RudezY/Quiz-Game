@@ -1,3 +1,6 @@
+const qs = function (tag){
+  return document.getElementById(tag);
+};
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 var timerElement = document.querySelector(".timer-count");
@@ -6,9 +9,10 @@ var currentQuestion = {}
 var questionCounter = 0;
 var acceptingAnswer = false
 var availableQuestions = [];
-var timer;
+var timeLeft = 120;
 var timerCount;
 var score = 0;
+const gameContainer = qs("game");
 
 
 // questions that will be asked
@@ -83,17 +87,38 @@ var questions = [
 // constant needed for game
 const Correct_Points = 10;
 const Max_Questions = 5;
+
+
+
+// eventlistener for on click begin quiz button // on click will start timer and game.
+startButton.addEventListener("click", startGame);
+console.log ("hi");
+//startButton.addEventListener("click", startTimer);
+
+function startTimer() {
+  timerElement.textContent = timeLeft;
+  timer = setInterval(() => {
+    timeLeft --;
+  timerElement.textContent = timeLeft;
+  }, 1000);
+}
+
+
+
 // nest within timer and start button
-startGame = () => {
+function startGame() {
+  startButton.classlist.add("hide");
+  gameContainer.classlist.remove("hide");
   questionCounter = 0;
   score = 0;
   availableQuestions = [...questions];
+  
   getNewQuestions();
 };
 // grabs a random question from the array to ask
 getNewQuestions = () => {
   // returns to high score page 
-  if(availableQuestions.length === 0 || questionCounter > Max_Questions) {
+  if(availableQuestions.length === 0 || questionCounter > Max_Questions || timeLeft <= 0) {
     localStorage.setItem('recentScore', score);
     return window.location.assign("../results.html")
 
@@ -124,7 +149,13 @@ getNewQuestions = () => {
  var valueToApply = "incorrect";
   if ( selectedAnswer == currentQuestion.answer){
     valueToApply = "correct";
-  };
+  }else {
+  if ( selectedAnswer == currentQuestion.answer){
+    valueToApply = "incorrect";
+    timeLeft -= 10;
+  }
+  }
+  ;
 
 if (valueToApply === "correct"){
   incrementScore(Correct_Points)
@@ -141,7 +172,7 @@ incrementScore = num => {
   console.log(score);
 };
 
- startGame();
+
 
 
 // The begin quiz button when the button is clicked
