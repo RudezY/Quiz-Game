@@ -6,7 +6,7 @@ var currentQuestion = {}
 var questionCounter = 0;
 var acceptingAnswer = false
 var availableQuestions = [];
-var timeLeft = 5;
+var timeLeft = 80;
 var score = 0;
 
 
@@ -115,8 +115,9 @@ function startGame() {
 // grabs a random question from the array to ask
 getNewQuestions = () => {
   // returns to high score page 
-  if(timeLeft <= 0 || availableQuestions.length === 0 || questionCounter > Max_Questions) {
-    endGame();
+  if( availableQuestions.length === 0 || questionCounter > Max_Questions) {
+    localStorage.setItem('recentScore', score);
+    return window.location.assign("./results.html")
   }
   questionCounter ++;
   const questionOrder = Math.floor(Math.random() * availableQuestions.length);
