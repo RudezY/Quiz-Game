@@ -1,6 +1,3 @@
-const qs = function (tag){
-  return document.getElementById(tag);
-};
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 var timerElement = document.querySelector(".timer-count");
@@ -9,10 +6,9 @@ var currentQuestion = {}
 var questionCounter = 0;
 var acceptingAnswer = false
 var availableQuestions = [];
-var timeLeft = 120;
-var timerCount;
+var timeLeft = 5;
 var score = 0;
-const gameContainer = qs("game");
+
 
 
 // questions that will be asked
@@ -89,11 +85,14 @@ const Correct_Points = 10;
 const Max_Questions = 5;
 
 
+function endGame() {
+  if (timeLeft <=0) {
+localStorage.setItem('recentScore', score);
+return window.location.assign("./results.html")
+  };
+};
 
-// eventlistener for on click begin quiz button // on click will start timer and game.
-startButton.addEventListener("click", startGame);
-console.log ("hi");
-//startButton.addEventListener("click", startTimer);
+
 
 function startTimer() {
   timerElement.textContent = timeLeft;
@@ -101,14 +100,12 @@ function startTimer() {
     timeLeft --;
   timerElement.textContent = timeLeft;
   }, 1000);
-}
+};
 
 
 
 // nest within timer and start button
 function startGame() {
-  startButton.classlist.add("hide");
-  gameContainer.classlist.remove("hide");
   questionCounter = 0;
   score = 0;
   availableQuestions = [...questions];
@@ -118,10 +115,8 @@ function startGame() {
 // grabs a random question from the array to ask
 getNewQuestions = () => {
   // returns to high score page 
-  if(availableQuestions.length === 0 || questionCounter > Max_Questions || timeLeft <= 0) {
-    localStorage.setItem('recentScore', score);
-    return window.location.assign("../results.html")
-
+  if(timeLeft <= 0 || availableQuestions.length === 0 || questionCounter > Max_Questions) {
+    endGame();
   }
   questionCounter ++;
   const questionOrder = Math.floor(Math.random() * availableQuestions.length);
@@ -149,13 +144,11 @@ getNewQuestions = () => {
  var valueToApply = "incorrect";
   if ( selectedAnswer == currentQuestion.answer){
     valueToApply = "correct";
-  }else {
-  if ( selectedAnswer == currentQuestion.answer){
-    valueToApply = "incorrect";
+  } else {
+     valueToApply = "incorrect";
     timeLeft -= 10;
-  }
-  }
-  ;
+  };
+  
 
 if (valueToApply === "correct"){
   incrementScore(Correct_Points)
@@ -164,7 +157,7 @@ if (valueToApply === "correct"){
   setTimeout( () => {
   getNewQuestions();
   }, 1000);
- });
+});
 });
 
 incrementScore = num => {
@@ -172,7 +165,9 @@ incrementScore = num => {
   console.log(score);
 };
 
-
+startGame();
+startTimer();
+endGame();
 
 
 // The begin quiz button when the button is clicked

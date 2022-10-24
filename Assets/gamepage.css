@@ -81,9 +81,7 @@ button:hover {
     color: whitesmoke;
     cursor: pointer;
 }
-.hide {
-    display: none;
-}
+
 
 .choice-prefix {
 padding: .5rem 1.5rem;
