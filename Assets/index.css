@@ -41,20 +41,18 @@ section {
     border-radius: 5px;
     background: linear-gradient(to top left, rgb(248, 71, 27), rgb(45, 123, 197));
     opacity: 0.9;
-}
-
-section {
     width: fit-content;
     height: fit-content;
     text-align: center;
 }
 
-#highScoreList {
+
+/*#highScoreList {
     list-style: none;
     padding-left: 0;
     margin-bottom: 10px;
 }
-
+*/
 a {
     font-size: 25px;
     color: black;

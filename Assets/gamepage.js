@@ -82,7 +82,7 @@ var questions = [
 
 // constant needed for game
 const Correct_Points = 10;
-const Max_Questions = 5;
+const Max_Questions = 4;
 
 
 function endGame() {
