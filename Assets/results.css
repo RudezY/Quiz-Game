@@ -58,9 +58,27 @@ form {
     flex-direction: column;
     align-items: center;
     }
+
     input {
         margin-bottom: 10px;
         padding: 10px;
         border-radius: 5px;
         border: 1px solid crimson;
+    }
+    a {
+        font-size: 25px;
+        color: black;
+        margin 2px;
+        padding: 2px;
+        border-style: solid;
+        height: 35px;  
+        background-color: crimson;;
+        border-radius: 1px;
+         text-decoration: none;
+         border-color: black;
+    
+    }
+    a:hover {
+        background-color: rgb(180, 180, 180);
+        cursor: pointer;
     }
