@@ -6,7 +6,7 @@ var currentQuestion = {}
 var questionCounter = 0;
 var acceptingAnswer = false
 var availableQuestions = [];
-var timeLeft = 80;
+var timeLeft = 8;
 var score = 0;
 
 
@@ -84,7 +84,7 @@ var questions = [
 const Correct_Points = 10;
 const Max_Questions = 4;
 
-
+// This will run when timeleft is 0. This function sends you to the results page and saves your score.
 function endGame() {
   if (timeLeft <=0) {
 localStorage.setItem('recentScore', score);
@@ -92,13 +92,16 @@ return window.location.assign("./results.html")
   };
 };
 
-
+//This is the timer function. Will clear time when time is 0 and run endgame function.
 
 function startTimer() {
   timerElement.textContent = timeLeft;
   timer = setInterval(() => {
     timeLeft --;
   timerElement.textContent = timeLeft;
+  if (timeLeft == 0)
+  clearInterval(timer);
+  endGame();
   }, 1000);
 };
 
@@ -119,6 +122,7 @@ getNewQuestions = () => {
     localStorage.setItem('recentScore', score);
     return window.location.assign("./results.html")
   }
+  // This will increase question counter until max number of questions is reached and if it is not at max number of questions will get a new question.
   questionCounter ++;
   const questionOrder = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionOrder];
@@ -141,7 +145,7 @@ getNewQuestions = () => {
   acceptingAnswer = false;
   const selectedChoice = e.target;
   const selectedAnswer = selectedChoice.dataset["number"];
- // this applies if selected choice was correct or incorrect.
+ // this applies if selected choice was correct or incorrect and if incorrect deducts time.
  var valueToApply = "incorrect";
   if ( selectedAnswer == currentQuestion.answer){
     valueToApply = "correct";
@@ -169,14 +173,3 @@ incrementScore = num => {
 startGame();
 startTimer();
 endGame();
-
-
-// The begin quiz button when the button is clicked
-
-// the end quiz function is called when either all questions are answered or time runs out
-
-// the SetTimer function starts and stops the timer and will trigger the total score calculation
-
-// the SetHighScore function calculates score when either all questions are answered or time runs out
-
-// attach even listener to begin quiz button on click
