@@ -6,7 +6,7 @@ var currentQuestion = {}
 var questionCounter = 0;
 var acceptingAnswer = false
 var availableQuestions = [];
-var timeLeft = 8;
+var timeLeft = 60;
 var score = 0;
 
 
