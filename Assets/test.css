@@ -8,8 +8,8 @@ body {
 } 
 canvas {
     display: block;
-    height:100%; 
-    width:100%;
+    height:100vh; 
+    width:100vw;
 }
 
 header {
@@ -92,20 +92,24 @@ div {
         left: auto;
       }
     canvas {
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
     }
   
 
   }
   /* media screen formatting for smaller screens */
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 680px) {
+    header {
+        height: 90px;
+    }
     h1 {
         font-size: 50px;
+        margin-top: 20px;
     }
     canvas {
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
     }
     div {
         right: 0;

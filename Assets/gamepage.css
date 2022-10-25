@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background-image: url("https://i.natgeofe.com/k/f5b0d18e-78f4-4697-bd3f-509aaa3bf606/1900x1068_herolead_quiz_3x2.jpg");
+    background-size: cover;
+}
 
 header {
     display: flex;
@@ -10,8 +14,9 @@ header {
     align-items: center;
     margin-top: 20px;
     font-size: 60px;
-    background-color:crimson;
+    background: linear-gradient(to top left, rgb(240, 49, 49), rgb(45, 123, 197));
     width: 40%;
+    opacity: .8;
     margin-left: 30%;
     border-radius: 5px;
     border-color: black;
@@ -39,23 +44,13 @@ h1 {
     align-items: center;
 }
 
-button {
-    height: 60px;
-    width: 90px;
-    font-size: 25px; 
-    background-color: crimson;;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-button:hover {
-    background-color: rgb(180, 180, 180);
-    cursor: pointer;
-}
 .container {
     width: 100%;
     height: 80%;
-    background-color: white;
+    
+    border-radius: 90px;
     display: flex;
+    opacity: .9;
     flex: 0 auto;
     justify-content: center;
     padding: 10px;
@@ -65,9 +60,11 @@ button:hover {
 
 .container h2 {
     font-size: 30px;
+    background: linear-gradient(to top left, rgb(240, 49, 49), rgb(45, 123, 197));
 }
 
 .choice-container {
+    background: linear-gradient(to top left, rgb(240, 49, 49), rgb(45, 123, 197));
     display: flex;
     margin-bottom: 4px;
     margin-top: 4px;

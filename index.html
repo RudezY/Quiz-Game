@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="./Assets/index.css">
 </head>
 
-<body style="background-image: url('https://thumbs.dreamstime.com/b/randomly-scattered-question-marks-white-paper-over-colorful-red-background-conceptual-image-165308628.jpg');">
+<body style="position: relative">
+    <canvas>
+    </canvas>
+    <div style = "position: fixed; top: 0; width: 100vw; height: 100vh; opacity: .7;">
     <header>
         <h1>Welcome to the JavaScript Quiz Game!</h1>
         </header>
         <main>
             
-            <section>
+            <section style>
                 <div>
                    <h2>Are you ready to play?</h2>
                     <a href="gamepage.html">Begin the Quiz</a>
@@ -25,12 +28,11 @@
                 <div id="highScores">
                    <h2>Here are the current high scores!</h2>
                    <ul id="highScoresList"></ul>
-                    <button class="high-score-button">Show High Scores</button>
                     <button class="reset-button">Reset Scores</button>
                 </div>
             </section>
 
-
+    </div>
 
         </main>
 </body>
