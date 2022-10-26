@@ -32,14 +32,6 @@ font-weight: bolder;
 background: linear-gradient(to top left, rgb(240, 49, 49), rgb(45, 123, 197));
 
 }
-h1 {
-    font-weight: 100;
-    font-size: 60px;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
 .container {

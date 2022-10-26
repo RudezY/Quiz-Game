@@ -1,7 +1,6 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 var timerElement = document.querySelector(".timer-count");
-var startButton = document.querySelector(".start-button");
 var currentQuestion = {}
 var questionCounter = 0;
 var acceptingAnswer = false

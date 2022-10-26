@@ -25,7 +25,7 @@ header {
 h1 {
     font-weight: 100;
     font-size: 60px;
-    color: black;
+    color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,14 +47,13 @@ button {
     background-color: crimson;;
     border-color: black;
     margin-bottom: 5px;
+    border-width: 3px;
 }
 button:hover {
     background-color: rgb(180, 180, 180);
     cursor: pointer;
 }
-h1{
-    color: aliceblue;
-}
+
 form {
     width: 100%;
     display: flex;
@@ -66,12 +65,12 @@ form {
         margin-bottom: 10px;
         padding: 10px;
         border-radius: 5px;
-        border: 1px solid crimson;
+        border: 5px solid crimson
     }
     a {
         font-size: 25px;
         color: black;
-        margin 2px;
+        margin: 2px;
         padding: 2px;
         border-style: solid;
         height: 35px;  
