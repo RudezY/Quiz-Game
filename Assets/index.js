@@ -1,7 +1,6 @@
 //var getHighScoresList = document.querySelector(".high-score-button");
 var highScoreList = document.getElementById("highScoresList");
 var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-console.log(highScores);
 highScoreList.innerHTML = highScores.map(score => {
     return `<li class="high-score">${score.name} - ${score.score}</li>`
 }).join('')
@@ -9,12 +8,12 @@ highScoreList.innerHTML = highScores.map(score => {
 //getHighScoresList.addEventListener("click", printHighScore);
 
 var resetScores = document.querySelector(".reset-button");
-
+// this function resets the high scores list and reloads the page so the high scores section is cleared
 function resetHighScores() {
 localStorage.clear();
 window.location.reload("/index.html");
 };
-
+// event listener for the reset button
 resetScores.addEventListener("click", resetHighScores);
 
 // Initializing the canvas

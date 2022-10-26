@@ -154,11 +154,11 @@ getNewQuestions = () => {
     timeLeft -= 10;
   };
   
-
+// this applies points to your total correct score
 if (valueToApply === "correct"){
   incrementScore(Correct_Points)
 }
-
+// this function sets a delay before getting a new question
   setTimeout( () => {
   getNewQuestions();
   }, 1000);
@@ -167,7 +167,6 @@ if (valueToApply === "correct"){
 
 incrementScore = num => {
   score += num;
-  console.log(score);
 };
 
 startGame();

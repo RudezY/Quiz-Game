@@ -1,6 +1,6 @@
 # 04 Web APIs: Code Quiz
 
-## This quiz game assignment consists of three different HTML elements as well as css and javascript that style and create functionality on each of the HTML elements. The game will ask you a series of questions and if the questions are all answered before the time runs out or if the time runs out you will be pushed to the results page. In this page you will input a username and save your score. Once that is completed you will go to the home page where your high scores will be shown. If you reset your scores the page will refresh as well as clear all local storage scores leaving you with a empty high score board. 
+## This quiz game assignment consists of three different HTML elements as well as css and javascript that style and create functionality on each of the HTML elements. The game will ask you a series of questions and if the questions are all answered before the time runs out or if the time runs out you will be pushed to the results page. In this page you will input a username and save your score. Once that is completed you will go to the home page where your high scores will be shown. If you reset your scores the page will refresh as well as clear all local storage scores leaving you with a empty high score board. There were references used from some tutorials on how to get some code to work and work with other classmates to figure out issues that would not function properly.
 
 ## Deployed website
 https://rudezy.github.io/Quiz-Game/
