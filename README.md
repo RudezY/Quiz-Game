@@ -1,20 +1,12 @@
 # 04 Web APIs: Code Quiz
 
-## Your Task
+## This quiz game assignment consists of three different HTML elements as well as css and javascript that style and create functionality on each of the HTML elements. The game will ask you a series of questions and if the questions are all answered before the time runs out or if the time runs out you will be pushed to the results page. In this page you will input a username and save your score. Once that is completed you will go to the home page where your high scores will be shown. If you reset your scores the page will refresh as well as clear all local storage scores leaving you with a empty high score board. 
 
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
+## Deployed website
+https://rudezy.github.io/Quiz-Game/
 
-To help familiarize you with these tests and allow you to use the skills covered in this module, this Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
 
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
-
-## User Story
-
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+![HW4 Screenshot](./Assets/rudezy-github-io-Quiz-Game--1.png)
 
 ## Acceptance Criteria
 
@@ -32,11 +24,6 @@ WHEN the game is over
 THEN I can save my initials and my score
 ```
 
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
 
 ## Grading Requirements
 

@@ -114,7 +114,7 @@ align-items: center;
 
   }
   /* media screen formatting for smaller screens */
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 780px) {
     h1 {
         font-size: 50px;
     }
