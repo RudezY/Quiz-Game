@@ -11,7 +11,7 @@ const MAX_HIGH_SCORES = 5;
 
 
 username.addEventListener('keydown', () => {
-saveScore.disabled = !username.value;
+saveScore = !username.value;
 });
 
 saveHighScore = e => {

@@ -12,6 +12,7 @@ var resetScores = document.querySelector(".reset-button");
 
 function resetHighScores() {
 localStorage.clear();
+window.location.reload("/index.html");
 };
 
 resetScores.addEventListener("click", resetHighScores);
