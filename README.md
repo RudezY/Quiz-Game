@@ -4,7 +4,8 @@
 
 ## Deployed website
 https://rudezy.github.io/Quiz-Game/
-
+ ## repository website
+ https://github.com/RudezY/Quiz-Game
 
 ![HW4 Screenshot](./Assets/rudezy-github-io-Quiz-Game--1.png)
 
