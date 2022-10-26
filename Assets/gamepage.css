@@ -25,7 +25,11 @@ header {
 
 .timer{
 font-size: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
 font-weight: bolder;
+background: linear-gradient(to top left, rgb(240, 49, 49), rgb(45, 123, 197));
 
 }
 h1 {
@@ -91,4 +95,35 @@ align-items: center;
     padding-left: 30px;
     padding-top: 10px;
     width: 100%;
+}
+
+@media screen and (max-width: 980px) {
+    header {
+      padding: 0 0 10px 0;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    header h1 {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+  
+
+  }
+  /* media screen formatting for smaller screens */
+  @media screen and (max-width: 800px) {
+    h1 {
+        font-size: 50px;
+    }
+    header h1 {
+        font-size: 30px;
+  }
+  .timer {
+    font-size: 40px;
+    padding: 5px;
+    margin: 5px;
+  }
 }
